@@ -1,0 +1,48 @@
+{
+  "format": 1,
+  "rigs": [
+    {
+      "id": "humanoid",
+      "nameKey": "rig.rpgmodel.humanoid",
+      "rootBone": "root",
+      "bones": [
+        {"name": "root", "parent": null, "pivot": [0, 0, 0], "rotation": [0, 0, 0]},
+        {"name": "body", "parent": "root", "pivot": [0, 0, 0], "rotation": [0, 0, 0]},
+        {"name": "head", "parent": "body", "pivot": [0, 0, 0], "rotation": [0, 0, 0]},
+        {"name": "hat", "parent": "head", "pivot": [0, 0, 0], "rotation": [0, 0, 0]},
+        {"name": "jacket", "parent": "body", "pivot": [0, 0, 0], "rotation": [0, 0, 0]},
+        {"name": "right_arm", "parent": "body", "pivot": [-5, 2, 0], "rotation": [0, 0, 0]},
+        {"name": "left_arm", "parent": "body", "pivot": [5, 2, 0], "rotation": [0, 0, 0]},
+        {"name": "right_sleeve", "parent": "right_arm", "pivot": [0, 0, 0], "rotation": [0, 0, 0]},
+        {"name": "left_sleeve", "parent": "left_arm", "pivot": [0, 0, 0], "rotation": [0, 0, 0]},
+        {"name": "right_leg", "parent": "body", "pivot": [-1.9, 12, 0], "rotation": [0, 0, 0]},
+        {"name": "left_leg", "parent": "body", "pivot": [1.9, 12, 0], "rotation": [0, 0, 0]},
+        {"name": "right_pants", "parent": "right_leg", "pivot": [0, 0, 0], "rotation": [0, 0, 0]},
+        {"name": "left_pants", "parent": "left_leg", "pivot": [0, 0, 0], "rotation": [0, 0, 0]}
+      ],
+      "attachPoints": [
+        {"id": "right_hand", "bone": "right_arm", "offset": [0, 10, 0]},
+        {"id": "left_hand", "bone": "left_arm", "offset": [0, 10, 0]},
+        {"id": "head_top", "bone": "head", "offset": [0, -8, 0]}
+      ]
+    },
+    {
+      "id": "quadruped",
+      "nameKey": "rig.rpgmodel.quadruped",
+      "rootBone": "root",
+      "bones": [
+        {"name": "root", "parent": null, "pivot": [0, 0, 0], "rotation": [0, 0, 0]},
+        {"name": "body", "parent": "root", "pivot": [0, 8, 0], "rotation": [0, 0, 0]},
+        {"name": "head", "parent": "body", "pivot": [0, 6, -10], "rotation": [0, 0, 0]},
+        {"name": "leg_fl", "parent": "body", "pivot": [4, 12, -8], "rotation": [0, 0, 0]},
+        {"name": "leg_fr", "parent": "body", "pivot": [-4, 12, -8], "rotation": [0, 0, 0]},
+        {"name": "leg_bl", "parent": "body", "pivot": [4, 12, 8], "rotation": [0, 0, 0]},
+        {"name": "leg_br", "parent": "body", "pivot": [-4, 12, 8], "rotation": [0, 0, 0]}
+      ],
+      "attachPoints": [
+        {"id": "muzzle", "bone": "head", "offset": [0, 2, -8]},
+        {"id": "back", "bone": "body", "offset": [0, -4, 0]}
+      ]
+    }
+  ]
+}

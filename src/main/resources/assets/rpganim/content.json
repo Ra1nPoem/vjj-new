@@ -1,0 +1,384 @@
+{
+  "format": 1,
+  "animations": [
+    {
+      "id": "emote_wave",
+      "nameKey": "anim.rpganim.emote_wave",
+      "category": "emote",
+      "durationTicks": 48,
+      "loop": true,
+      "priority": 40,
+      "blendInTicks": 6,
+      "blendOutTicks": 8,
+      "rig": "humanoid",
+      "bones": {
+        "right_arm": {
+          "rotation": [[0, -165, 0, -12], [8, -165, 0, -30, "smooth"], [16, -165, 0, 5, "smooth"], [24, -165, 0, -30, "smooth"], [32, -165, 0, 5, "smooth"], [40, -165, 0, -12, "smooth"], [48, -165, 0, -12]]
+        },
+        "head": {
+          "rotation": [[0, 0, 12, 0], [24, 0, 6, 0, "smooth"], [48, 0, 12, 0]]
+        },
+        "body": {
+          "rotation": [[0, 0, 4, 0], [24, 0, 2, 0, "smooth"], [48, 0, 4, 0]]
+        }
+      }
+    },
+    {
+      "id": "emote_cheer",
+      "nameKey": "anim.rpganim.emote_cheer",
+      "category": "emote",
+      "durationTicks": 40,
+      "loop": false,
+      "priority": 40,
+      "blendInTicks": 5,
+      "blendOutTicks": 8,
+      "rig": "humanoid",
+      "bones": {
+        "right_arm": {
+          "rotation": [[0, 0, 0, 0], [10, -170, 0, -25, "smooth"], [20, -160, 0, -15], [30, -170, 0, -25], [40, 0, 0, 0]]
+        },
+        "left_arm": {
+          "rotation": [[0, 0, 0, 0], [10, -170, 0, 25, "smooth"], [20, -160, 0, 15], [30, -170, 0, 25], [40, 0, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, 0, 0, 0], [10, -18, 0, 0, "smooth"], [30, -18, 0, 0], [40, 0, 0, 0]]
+        },
+        "body": {
+          "rotation": [[0, 0, 0, 0], [10, -6, 0, 0, "smooth"], [30, -6, 0, 0], [40, 0, 0, 0]]
+        }
+      }
+    },
+    {
+      "id": "emote_bow",
+      "nameKey": "anim.rpganim.emote_bow",
+      "category": "emote",
+      "durationTicks": 50,
+      "loop": false,
+      "priority": 40,
+      "blendInTicks": 6,
+      "blendOutTicks": 8,
+      "rig": "humanoid",
+      "bones": {
+        "body": {
+          "rotation": [[0, 0, 0, 0], [18, 35, 0, 0, "smooth"], [34, 35, 0, 0], [50, 0, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, 0, 0, 0], [18, 25, 0, 0, "smooth"], [34, 25, 0, 0], [50, 0, 0, 0]]
+        },
+        "right_arm": {
+          "rotation": [[0, 0, 0, 0], [18, 15, 0, -10, "smooth"], [34, 15, 0, -10], [50, 0, 0, 0]]
+        },
+        "left_arm": {
+          "rotation": [[0, 0, 0, 0], [18, 15, 0, 10, "smooth"], [34, 15, 0, 10], [50, 0, 0, 0]]
+        }
+      }
+    },
+    {
+      "id": "emote_point",
+      "nameKey": "anim.rpganim.emote_point",
+      "category": "emote",
+      "durationTicks": 30,
+      "loop": false,
+      "priority": 40,
+      "blendInTicks": 4,
+      "blendOutTicks": 6,
+      "rig": "humanoid",
+      "bones": {
+        "right_arm": {
+          "rotation": [[0, 0, 0, 0], [8, -95, 0, 0, "smooth"], [22, -95, 0, 0], [30, 0, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, 0, 0, 0], [8, -5, -15, 0, "smooth"], [22, -5, -15, 0], [30, 0, 0, 0]]
+        },
+        "body": {
+          "rotation": [[0, 0, 0, 0], [8, 0, -10, 0, "smooth"], [22, 0, -10, 0], [30, 0, 0, 0]]
+        }
+      }
+    },
+    {
+      "id": "emote_salute",
+      "nameKey": "anim.rpganim.emote_salute",
+      "category": "emote",
+      "durationTicks": 40,
+      "loop": false,
+      "priority": 40,
+      "blendInTicks": 5,
+      "blendOutTicks": 8,
+      "rig": "humanoid",
+      "bones": {
+        "right_arm": {
+          "rotation": [[0, 0, 0, 0], [12, -125, 0, 30, "smooth"], [30, -125, 0, 30], [40, 0, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, 0, 0, 0], [12, -5, 0, 0], [30, -5, 0, 0], [40, 0, 0, 0]]
+        },
+        "body": {
+          "rotation": [[0, 0, 0, 0], [12, -3, 0, 0], [30, -3, 0, 0], [40, 0, 0, 0]]
+        }
+      }
+    },
+    {
+      "id": "combat_slash",
+      "nameKey": "anim.rpganim.combat_slash",
+      "category": "combat",
+      "durationTicks": 20,
+      "loop": false,
+      "priority": 60,
+      "blendInTicks": 2,
+      "blendOutTicks": 5,
+      "rig": "humanoid",
+      "bones": {
+        "right_arm": {
+          "rotation": [[0, 0, 0, 0], [5, 55, 0, -40, "smooth"], [9, -150, 0, 25, "smooth"], [13, -40, 0, 10], [20, 0, 0, 0]]
+        },
+        "left_arm": {
+          "rotation": [[0, 0, 0, 0], [5, 25, 0, 10], [9, -20, 0, -10], [20, 0, 0, 0]]
+        },
+        "body": {
+          "rotation": [[0, 0, 0, 0], [5, 0, -22, 0, "smooth"], [9, 0, 28, 0, "smooth"], [13, 0, 12, 0], [20, 0, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, 0, 0, 0], [9, 0, 18, 0], [20, 0, 0, 0]]
+        }
+      }
+    },
+    {
+      "id": "combat_heavy",
+      "nameKey": "anim.rpganim.combat_heavy",
+      "category": "combat",
+      "durationTicks": 26,
+      "loop": false,
+      "priority": 65,
+      "blendInTicks": 3,
+      "blendOutTicks": 6,
+      "rig": "humanoid",
+      "bones": {
+        "right_arm": {
+          "rotation": [[0, 0, 0, 0], [8, -170, 0, -10, "smooth"], [10, -175, 0, -10], [16, 75, 0, 0, "smooth"], [20, 70, 0, 0], [26, 0, 0, 0]]
+        },
+        "left_arm": {
+          "rotation": [[0, 0, 0, 0], [8, -170, 0, 10, "smooth"], [10, -175, 0, 10], [16, 75, 0, 0, "smooth"], [20, 70, 0, 0], [26, 0, 0, 0]]
+        },
+        "body": {
+          "rotation": [[0, 0, 0, 0], [8, -18, 0, 0, "smooth"], [16, 32, 0, 0, "smooth"], [26, 0, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, 0, 0, 0], [8, -12, 0, 0], [16, 20, 0, 0], [26, 0, 0, 0]]
+        }
+      }
+    },
+    {
+      "id": "combat_thrust",
+      "nameKey": "anim.rpganim.combat_thrust",
+      "category": "combat",
+      "durationTicks": 18,
+      "loop": false,
+      "priority": 60,
+      "blendInTicks": 2,
+      "blendOutTicks": 5,
+      "rig": "humanoid",
+      "bones": {
+        "right_arm": {
+          "rotation": [[0, 0, 0, 0], [4, 45, 0, 0, "smooth"], [7, -92, 0, 0, "smooth"], [12, -88, 0, 0], [18, 0, 0, 0]]
+        },
+        "left_arm": {
+          "rotation": [[0, 0, 0, 0], [7, 15, 0, 5], [18, 0, 0, 0]]
+        },
+        "body": {
+          "rotation": [[0, 0, 0, 0], [4, 0, 14, 0, "smooth"], [7, 0, -18, 0, "smooth"], [18, 0, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, 0, 0, 0], [7, 0, -10, 0], [18, 0, 0, 0]]
+        }
+      }
+    },
+    {
+      "id": "combat_block",
+      "nameKey": "anim.rpganim.combat_block",
+      "category": "combat",
+      "durationTicks": 20,
+      "loop": true,
+      "priority": 55,
+      "blendInTicks": 4,
+      "blendOutTicks": 6,
+      "rig": "humanoid",
+      "bones": {
+        "right_arm": {
+          "rotation": [[0, -70, 0, -30], [10, -74, 0, -34, "smooth"], [20, -70, 0, -30]]
+        },
+        "left_arm": {
+          "rotation": [[0, -70, 0, 30], [10, -74, 0, 34, "smooth"], [20, -70, 0, 30]]
+        },
+        "body": {
+          "rotation": [[0, 5, 0, 0], [10, 7, 0, 0, "smooth"], [20, 5, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, 4, 0, 0], [20, 4, 0, 0]]
+        }
+      }
+    },
+    {
+      "id": "combat_cast",
+      "nameKey": "anim.rpganim.combat_cast",
+      "category": "combat",
+      "durationTicks": 30,
+      "loop": false,
+      "priority": 60,
+      "blendInTicks": 4,
+      "blendOutTicks": 6,
+      "rig": "humanoid",
+      "bones": {
+        "right_arm": {
+          "rotation": [[0, 0, 0, 0], [9, -105, 0, -15, "smooth"], [15, -125, 0, -15, "smooth"], [23, -120, 0, -12], [30, 0, 0, 0]]
+        },
+        "left_arm": {
+          "rotation": [[0, 0, 0, 0], [9, -105, 0, 15, "smooth"], [15, -125, 0, 15, "smooth"], [23, -120, 0, 12], [30, 0, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, 0, 0, 0], [10, -14, 0, 0, "smooth"], [23, -14, 0, 0], [30, 0, 0, 0]]
+        },
+        "body": {
+          "rotation": [[0, 0, 0, 0], [10, -6, 0, 0], [23, -6, 0, 0], [30, 0, 0, 0]]
+        }
+      }
+    },
+    {
+      "id": "combat_ready",
+      "nameKey": "anim.rpganim.combat_ready",
+      "category": "combat",
+      "durationTicks": 30,
+      "loop": true,
+      "priority": 50,
+      "blendInTicks": 6,
+      "blendOutTicks": 8,
+      "rig": "humanoid",
+      "bones": {
+        "right_arm": {
+          "rotation": [[0, -25, 0, -10], [15, -30, 0, -12, "smooth"], [30, -25, 0, -10]]
+        },
+        "left_arm": {
+          "rotation": [[0, -25, 0, 10], [15, -30, 0, 12, "smooth"], [30, -25, 0, 10]]
+        },
+        "body": {
+          "rotation": [[0, 4, 0, 0], [15, 5, 0, 0, "smooth"], [30, 4, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, -2, 0, 0], [30, -2, 0, 0]]
+        }
+      }
+    },
+    {
+      "id": "combat_hit",
+      "nameKey": "anim.rpganim.combat_hit",
+      "category": "hit",
+      "durationTicks": 12,
+      "loop": false,
+      "priority": 80,
+      "blendInTicks": 1,
+      "blendOutTicks": 5,
+      "rig": "humanoid",
+      "bones": {
+        "body": {
+          "rotation": [[0, 0, 0, 0], [3, -22, 0, 0, "smooth"], [8, -10, 0, 0], [12, 0, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, 0, 0, 0], [3, -28, 0, 0, "smooth"], [8, -12, 0, 0], [12, 0, 0, 0]]
+        },
+        "right_arm": {
+          "rotation": [[0, 0, 0, 0], [3, 35, 0, 25, "smooth"], [12, 0, 0, 0]]
+        },
+        "left_arm": {
+          "rotation": [[0, 0, 0, 0], [3, 35, 0, -25, "smooth"], [12, 0, 0, 0]]
+        }
+      }
+    },
+    {
+      "id": "defeat",
+      "nameKey": "anim.rpganim.defeat",
+      "category": "hit",
+      "durationTicks": 45,
+      "loop": false,
+      "priority": 90,
+      "blendInTicks": 3,
+      "blendOutTicks": 10,
+      "rig": "humanoid",
+      "bones": {
+        "body": {
+          "rotation": [[0, 0, 0, 0], [18, 65, 0, 0, "smooth"], [40, 80, 0, 0], [45, 80, 0, 0]],
+          "position": [[0, 0, 0, 0], [18, 0, 4, 0, "smooth"], [40, 0, 6, 0], [45, 0, 6, 0]]
+        },
+        "head": {
+          "rotation": [[0, 0, 0, 0], [18, 45, 0, 0, "smooth"], [40, 60, 0, 0], [45, 60, 0, 0]]
+        },
+        "right_arm": {
+          "rotation": [[0, 0, 0, 0], [18, 45, 0, 15, "smooth"], [40, 60, 0, 20], [45, 60, 0, 20]]
+        },
+        "left_arm": {
+          "rotation": [[0, 0, 0, 0], [18, 45, 0, -15, "smooth"], [40, 60, 0, -20], [45, 60, 0, -20]]
+        }
+      }
+    },
+    {
+      "id": "victory",
+      "nameKey": "anim.rpganim.victory",
+      "category": "emote",
+      "durationTicks": 60,
+      "loop": false,
+      "priority": 70,
+      "blendInTicks": 5,
+      "blendOutTicks": 10,
+      "rig": "humanoid",
+      "bones": {
+        "right_arm": {
+          "rotation": [[0, 0, 0, 0], [12, -170, 0, -18, "smooth"], [22, -160, 0, -12], [32, -170, 0, -18], [42, -160, 0, -12], [52, -170, 0, -18], [60, 0, 0, 0]]
+        },
+        "left_arm": {
+          "rotation": [[0, 0, 0, 0], [12, -170, 0, 18, "smooth"], [22, -160, 0, 12], [32, -170, 0, 18], [42, -160, 0, 12], [52, -170, 0, 18], [60, 0, 0, 0]]
+        },
+        "head": {
+          "rotation": [[0, 0, 0, 0], [12, -16, 0, 0, "smooth"], [42, -16, 0, 0], [60, 0, 0, 0]]
+        },
+        "body": {
+          "rotation": [[0, 0, 0, 0], [12, -6, 0, 0, "smooth"], [42, -6, 0, 0], [60, 0, 0, 0]]
+        }
+      }
+    }
+  ],
+  "cutscenes": [
+    {
+      "id": "boss_intro",
+      "titleKey": "cutscene.rpganim.boss_intro",
+      "durationTicks": 180,
+      "camera": {"style": "boss_intro", "at": 0, "durationTicks": 180},
+      "steps": [
+        {"at": 0, "anim": "combat_ready", "loop": true},
+        {"at": 50, "anim": "emote_point"},
+        {"at": 100, "anim": "combat_heavy"},
+        {"at": 150, "anim": "combat_ready", "loop": true}
+      ]
+    },
+    {
+      "id": "victory",
+      "titleKey": "cutscene.rpganim.victory",
+      "durationTicks": 140,
+      "camera": {"style": "victory", "at": 0, "durationTicks": 140},
+      "steps": [
+        {"at": 10, "anim": "victory"},
+        {"at": 80, "anim": "emote_cheer"}
+      ]
+    },
+    {
+      "id": "duel",
+      "titleKey": "cutscene.rpganim.duel",
+      "durationTicks": 200,
+      "camera": {"style": "orbit", "at": 0, "durationTicks": 200},
+      "steps": [
+        {"at": 0, "anim": "combat_ready", "loop": true},
+        {"at": 40, "anim": "combat_slash"},
+        {"at": 80, "anim": "combat_hit"},
+        {"at": 110, "anim": "combat_block", "loop": true},
+        {"at": 170, "anim": "emote_salute"}
+      ]
+    }
+  ]
+}

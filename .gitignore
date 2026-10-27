@@ -1,0 +1,23 @@
+# Gradle / build outputs
+.gradle/
+build/
+out/
+*.log
+
+# Local dev runtimes / servers / worlds
+run/
+run-server/
+run-*/
+logs/
+crash-reports/
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Local secrets
+.env
+*.env

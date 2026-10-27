@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "id": "vjjnew",
+  "version": "${version}",
+  "name": "VJJ-NEW · RPG 演出整合版",
+  "description": "整合式 RPG 演出 mod：运镜（13 内置样式 + 关键帧镜头编辑器 + 变焦/放大缩小 + 强制镜头 + 锁死行动 + 隐藏玩家）、动画（14 个玩家/战斗动作 + 播放动画时生成玩家假人替代本体 + 管理员可视化板块）、模型骨骼前置（rig/绑定/校验），全部合并在一个 jar 里。OP 通过可视化面板编辑、保存并播放演出。1.1.0 新增玩家动画优化：与 EMF / Fresh Animations: Player Extension / Touch'n Motion 兼容，VJJ 动作通过 EMF 动画管线在资源包与程序化姿态之上叠加，并提供兼容开关。",
+  "authors": [
+    "VJJ-NEW"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.vjj.VjjNew",
+      "com.rpgcam.RpgCamera",
+      "com.rpgmodel.RpgModel",
+      "com.rpganim.RpgAnim"
+    ],
+    "client": [
+      "com.vjj.client.VjjNewClient",
+      "com.rpgcam.client.RpgCameraClient",
+      "com.rpgmodel.client.RpgModelClient",
+      "com.rpganim.client.RpgAnimClient"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "rpgcam.client.mixins.json",
+      "environment": "client"
+    },
+    {
+      "config": "rpgmodel.client.mixins.json",
+      "environment": "client"
+    },
+    {
+      "config": "rpganim.client.mixins.json",
+      "environment": "client"
+    },
+    {
+      "config": "vjj.camera.mixins.json",
+      "environment": "client"
+    },
+    {
+      "config": "vjj.dummy.mixins.json",
+      "environment": "client"
+    },
+    {
+      "config": "vjj.compat.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "provides": [
+    "rpgcam",
+    "rpgmodel",
+    "rpganim"
+  ],
+  "suggests": {
+    "questguide": ">=1.0.0",
+    "npcmod": ">=1.0.0",
+    "entity_model_features": ">=3.3.11",
+    "entity_texture_features": ">=7.2",
+    "touch_n_motion": ">=1.0.0",
+    "emf_compat_core": ">=2.3.0",
+    "punchy": ">=2.8"
+  }
+}

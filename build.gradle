@@ -1,0 +1,88 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        "vjjnew" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+
+    runs {
+        client {
+            property 'vjj.autotest', (project.findProperty('autotest') ?: 'off').toString()
+            if (project.hasProperty('quickPlay')) {
+                programArgs '--quickPlayMultiplayer', project.quickPlay.toString()
+            }
+            if (project.hasProperty('autoWidth')) {
+                programArgs '--width', project.autoWidth.toString(),
+                        '--height', (project.findProperty('autoHeight') ?: '720').toString()
+            }
+        }
+        server {
+            property 'vjj.autotest', (project.findProperty('autotest') ?: 'off').toString()
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+    // 可选兼容（EMF / ETF）：只在编译期依赖，运行期由玩家的 mods 提供；缺失时 VJJ 走纯 mixin 路径。
+    // jar 放在工程 libs/ 下（构建机无外网也能编译），不会被打进 vjj jar。
+    compileOnly files('libs/entity_model_features-3.3.12-26.3-fabric.jar')
+    compileOnly files('libs/entity_texture_features-7.2.6-26.3-fabric.jar')
+    // Punchy（第一人称动画 FPA）—— 战斗系统的第一人称动画基础，仅编译期依赖、不打包。
+    compileOnly files('libs/punchy-2.8g-fabric-26.3.jar')
+}
+
+// 兼容旧生态：薄 API jar（com/rpgcam/api/** + com/rpganim/api/** + com/rpgmodel/api/**），
+// 让 questguide / npcmod 这类旧 mod 仍可 compileOnly 依赖（VJJ-NEW 已在 fabric.mod.json 里
+// 用 provides 声明 rpgcam/rpganim/rpgmodel，运行时 isModLoaded 守卫会命中）。
+tasks.register('apiJar', Jar) {
+    group = 'build'
+    description = 'Thin API jar (com/rpgcam/api/**, com/rpganim/api/**, com/rpgmodel/api/**).'
+    archiveBaseName = "${project.archives_base_name}"
+    archiveClassifier = 'api'
+    archiveVersion = project.mod_version
+    from sourceSets.main.output
+    include 'com/rpgcam/api/**'
+    include 'com/rpganim/api/**'
+    include 'com/rpgmodel/api/**'
+    destinationDirectory = layout.buildDirectory.dir('libs')
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": inputs.properties.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = 'UTF-8'
+    it.options.release = 25
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}

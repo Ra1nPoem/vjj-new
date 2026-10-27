@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "minecraft:amethyst_shard",
+    "S": "minecraft:netherite_sword",
+    "R": "minecraft:ender_pearl"
+  },
+  "pattern": [
+    " A ",
+    "ASA",
+    " R "
+  ],
+  "result": {
+    "id": "vjjnew:cosmic_sword"
+  }
+}

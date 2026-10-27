@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.vjj.mixin.camera",
+  "client": [
+    "MinecraftInputLockMixin",
+    "MouseScrollZoomMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
